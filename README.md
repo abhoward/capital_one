@@ -6,8 +6,6 @@ You can download the latest version of Python [here](https://www.python.org/down
 
 Once you've installed Python (or if you already have it installed), the simplest way to install the three packages above is by installing Anaconda, a free package and environment manager.
 To do this, follow [this](https://docs.continuum.io/anaconda/install) link and download the installer according to your operating system.
-Once you've installed Anaconda, you should be able to run this script.
+Once you've installed Anaconda, you should be able to run this script. You can do that by simply cloning the repository and, in the same directory, typing the following in your terminal:
 
-Once the above is complete, simply clone the repository and run the script typing the following in your terminal:
-
-  `python capital_one_project.py`
+`python capital_one_project.py`
