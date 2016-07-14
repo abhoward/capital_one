@@ -90,7 +90,8 @@ def monthly_expenses(url, data, headers):
 
     # Since we want to break up the 'amount' column into expenses and income, we
     # need to create two columns (spent and income) based on whether the transaction
-    # amount is negative or positive
+    # amount is negative or positive. We also divide by 10000 to convert from centocents 
+    # to dollars
     spent = []
     for i in range(len(transactions_df.amount)):
         if transactions_df.amount[i] < 0:
@@ -117,8 +118,7 @@ def monthly_expenses(url, data, headers):
     final_df = pd.merge(join1_df, join2_df, on = 'transaction-time')
 
     # We calculate the average expense and income across all months below, giving us an
-    # idea of what an "average" month looks like for this particular user. We also
-    # divide by 10000 to convert from centocents to dollars
+    # idea of what an "average" month looks like for this particular user. 
     average_spent = np.mean(final_df['spent'])
     average_income = np.mean(final_df['income'])
 
